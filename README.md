@@ -1,16 +1,24 @@
-# HirdEngine
-A PHP actor network framework compatible with both Swoole and PHP-FPM, designed around the architectural principles of 'The Method' by Juval Löwy.
-We named it after **The Hird**—the elite, disciplined inner circle of Viking protectors who fought as an unbreakable shield wall to protect their king (the system you build)
+# Hird Engine
+A PHP actor network framework compatible with both Swoole and PHP-FPM, designed around the architectural principles of *Righting Software* ('The Method') by Juval Löwy.
+
+We named it after **The Hird**—the elite, disciplined inner circle of Viking protectors who fought as an unbreakable shield wall to protect their king (the system you build).
+
 For years, developers have faced an impossible choice when building complex, high-traffic systems:
-**The Monolith:** Fast to start, but inevitably devolves into unmaintainable, intertwined spaghetti code where one bug crashes the whole system.
-**The Microservice Tax:** Splitting the monolith solves isolation but introduces a massive new layer of network complexity, DevOps overhead, and exorbitant server costs.
+* **The Monolith:** Fast to start, but inevitably devolves into unmaintainable, intertwined spaghetti code where a single bug can crash the entire system.
+* **The Microservice Tax:** Splitting the monolith solves isolation but introduces a massive new layer of network complexity, DevOps overhead, and exorbitant server costs.
 
-**Hird Engine** was born from a desire to reject this compromise. After studying the book Righting Software by Juval Löwy and the Actor model from the 1970s, we started rethinking PHP architecture from the ground up, and built a framework that provides **microservice-level isolation without the network tax**, leveraging DI-container based actors living directly in the PHP runtime. It scales horisontaly out of the box and enforces a strict rules of architectual principles that have proven to make systems live longer than the expected lifetime of a system by isolating volatility, rather than functionality.
+**Hird Engine** was born from a desire to reject this compromise. After studying Juval Löwy's architectural methodologies and the foundational Actor Model from the 1970s, we rethought PHP architecture from the ground up. The result is a framework that provides **microservice-level isolation without the network tax**, leveraging DI-container-based actors living directly in the PHP runtime. 
 
-It also includes a no-trust security level and has a service-as-config system for CRUD operations with automatic database migration, so that developers can focus on contract design of the actors and the business logic. Everything else should be handled by the framwork.
+It scales horizontally out of the box and enforces strict architectural principles proven to extend a system's lifespan far beyond the norm—specifically by isolating *volatility* rather than just functionality.
 
-The framework is in production now, and will be released here once the beta phase is over, early 2027. The goal is to provide it as Open Source and as a service with all the infrastructure needed including dev, staging and production envirnment, deployment, backup, logging and monitoring in a webbased control panel for ease of use and clarity. 
+### Core Features
+* **Zero-Trust Security:** Built from the ground up with a strict, no-trust security model.
+* **Service-as-Config (Auto-CRUD):** Features an automated CRUD system with built-in database migrations. Developers can focus entirely on designing the Actor Contracts and writing business logic; the framework handles the rest.
+* **AI-Ready Architecture:** By its nature, the framework mitigates the risks of AI-assisted development. The strict isolation of actors ("The Hand Grenade Principle") massively reduces the blast radius of poorly written AI code. It also allows developers to safely use newer AI models to rewrite code in small, isolated parts of the system, confident that strict contracts will protect the surrounding services.
 
-The framework will also by its nature solve a problem with AI assisted- or based development, where the isolation of actors will massivly reduce the damage a sometimes poorly written AI code might damage the system. It will also make it possible to maintaign the code better by siimply letting better models rewrite the code in safe,saml isolated parts of teh system with a strict contract protecting the surrounding services and actors (The handgranade principle)
+### Current Status & Roadmap
+Hird Engine is currently running in production. The open-source code will be released here once the beta phase concludes in early 2027. 
 
-For more info, or early access, send me a msg ar roy.arne@skeyl.app
+Our ultimate goal is to provide Hird Engine both as Open Source software and as a fully managed Platform-as-a-Service (PaaS). The managed service will include all necessary infrastructure—development, staging, and production environments, deployment pipelines, backups, logging, and monitoring. Crucially, this PaaS will be accessible not only via an intuitive web-based control panel, but also through a dedicated programmatic MVC/API layer. This ensures that autonomous AI agents can seamlessly interact with, manage, and scale the infrastructure on your behalf.
+
+**For more information or to request early access, please contact me at:** roy.arne@skeyl.app
