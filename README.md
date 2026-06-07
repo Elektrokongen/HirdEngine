@@ -1,8 +1,6 @@
 # Hird Engine
 A PHP actor network framework compatible with both Swoole and PHP-FPM, designed around the architectural principles of *Righting Software* ('The Method') by Juval Löwy.
 
-We named it after **The Hird**; the elite, disciplined inner circle of Viking warriors who fought as an unbreakable shield wall to protect their king.
-
 For years, developers have faced an impossible choice when building complex, high-traffic systems:
 * **The Monolith:** Fast to start, but inevitably devolves into unmaintainable, intertwined spaghetti code where a single bug can crash the entire system.
 * **The Microservice Tax:** Splitting the monolith solves isolation but introduces a massive new layer of network complexity, DevOps overhead, and exorbitant server costs.
@@ -10,6 +8,8 @@ For years, developers have faced an impossible choice when building complex, hig
 **Hird Engine** was born from a desire to reject this compromise. After studying Juval Löwy's architectural methodologies and the foundational Actor Model from the 1970s, we rethought PHP architecture from the ground up. The result is a framework that provides **microservice-level isolation without the network tax**, leveraging DI-container-based actors living directly in the PHP runtime. 
 
 It scales horizontally out of the box and enforces strict architectural principles proven to extend a system's lifespan far beyond the norm, specifically by isolating *volatility* rather than just functionality.
+
+So we named it after the elite, disciplined inner circle of Viking warriors who fought as an unbreakable shield wall to protect their king, called **The Hird**.
 
 ### Core Features
 * **Zero-Trust Security & Dynamic Firewall**
