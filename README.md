@@ -12,13 +12,36 @@ For years, developers have faced an impossible choice when building complex, hig
 It scales horizontally out of the box and enforces strict architectural principles proven to extend a system's lifespan far beyond the norm, specifically by isolating *volatility* rather than just functionality.
 
 ### Core Features
-* **Zero-Trust Security:** Built from the ground up with a strict, no-trust security model.
-* **Service-as-Config (Auto-CRUD):** Features an automated CRUD system with built-in database migrations. Developers can focus entirely on designing the Actor Contracts and writing business logic; the framework handles the rest.
-* **AI-Ready Architecture:** By its nature, the framework mitigates the risks of AI-assisted development. The strict isolation of actors ("The Hand Grenade Principle") massively reduces the blast radius of poorly written AI code. It also allows developers to safely use newer AI models to rewrite code in small, isolated parts of the system, confident that strict contracts will protect the surrounding services.
+* **Zero-Trust Security & Dynamic Firewall**
+  Built from the ground up with a strict, no-trust security model. The engine includes an active, cluster-aware firewall with automated IP blacklisting, geolocation restrictions, and built-in rate limiting. It also features an "Early Exit Filter" that handles routine requests (like pings or robot blocks) in milliseconds without waking up the application logic.
+
+* **The Service Bridge (Actor Networking)**
+  Instead of fragile external API calls between microservices, Hird Engine uses a native Service Bridge. It securely routes messages between isolated actors across the entire cluster, enforcing mutual distrust and contract validation on every payload. It seamlessly handles both instant delivery and queued task execution.
+
+* **Strict Architectural Governance**
+  The framework does not just suggest good architecture; it enforces it at runtime. Configuration rules physically prevent unauthorized actions, such as enforcing that only specific Resource Access actors can touch the database, strictly enforcing actor boundaries, and maintaining call hierarchy. 
+
+* **Dynamic & Resilient Routing**
+  Features an intelligent routing engine capable of scanning for new endpoints dynamically (even recovering from 404s) and seamlessly falling back to robust file-based routing. This eliminates massive, hard-to-maintain central routing tables while maintaining blistering performance.
+
+* **Service-as-Config (Auto-CRUD & Auto-Docs)**
+  Features an automated CRUD system with built-in database migrations, automated table generation, and automatic API documentation. Developers focus entirely on designing Actor Contracts and business logic; the framework handles the data layer natively.
+
+* **Distributed Queue & Task Scheduler**
+  No need for external tools like Redis or server crontabs. Hird Engine includes a native, distributed queue system (with worker scaling, failure retries, and execution limits) and a built-in Task Scheduler for background jobs and maintenance cycles.
+
+* **Integrated Messaging & Smart Alarms**
+  The engine comes with native SMS (GatewayAPI) and Email (SendGrid) integration built-in. It continuously monitors its own health—tracking memory consumption, slow database queries, FPM pool utilization, and queue backlogs. If thresholds are breached, the Smart Alarm system routes alerts via these channels, utilizing intelligent duplicate suppression to prevent alert fatigue.
+
+* **Native Event Streams & Clustered File Sync**
+  Real-time data is handled out of the box with native Server-Sent Events (SSE) configuration. Additionally, the engine handles its own distributed state with an automated File Store Sync that seamlessly propagates files across your cluster network.
+
+* **AI-Ready Architecture**
+  By its nature, the framework mitigates the risks of AI-assisted development. The strict isolation of actors ("The Hand Grenade Principle") massively reduces the blast radius of poorly written AI code. It allows developers to safely use AI models to rewrite code in small, isolated parts of the system, confident that strict contracts will protect the surrounding services.
 
 ### Current Status & Roadmap
 Hird Engine is currently running in production. The open-source code will be released here once the beta phase concludes in early 2027. 
 
-Our ultimate goal is to provide Hird Engine both as Open Source software and as a fully managed Platform-as-a-Service (PaaS). The managed service will include all necessary infrastructure—development, staging, and production environments, deployment pipelines, backups, logging, and monitoring. Crucially, this PaaS will be accessible not only via an intuitive web-based control panel, but also through a dedicated programmatic MVC/API layer. This ensures that autonomous AI agents can seamlessly interact with, manage, and scale the infrastructure on your behalf.
+Our ultimate goal is to provide Hird Engine both as Open Source software and as a fully managed Platform-as-a-Service (PaaS). The managed service will include all necessary infrastructure for development, staging, and production environments, deployment pipelines, backups, logging, and monitoring. Crucially, this PaaS will be accessible not only via an intuitive web-based control panel, but also through a dedicated programmatic MVC/API layer. This ensures that autonomous AI agents can seamlessly interact with, manage, and scale the infrastructure on your behalf.
 
 **For more information or to request early access, please contact me at:** roy.arne@skeyl.app
