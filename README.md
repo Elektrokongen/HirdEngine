@@ -5,7 +5,7 @@ For years, developers have faced an impossible choice when building complex, hig
 * **The Monolith:** Fast to start, but inevitably devolves into unmaintainable, intertwined spaghetti code where a single bug can crash the entire system.
 * **The Microservice Tax:** Splitting the monolith solves isolation but introduces a massive new layer of network complexity, DevOps overhead, and exorbitant server costs.
 
-**Hird Engine** was born from a desire to reject this compromise. After studying Juval Löwy's architectural methodologies and the foundational Actor Model from the 1970s, we rethought PHP architecture from the ground up. The result is a framework that provides **microservice-level isolation without the network tax**, leveraging DI-container-based actors living directly in the PHP runtime. 
+**Hird Engine** was born from a desire to reject this compromise. After studying Juval Löwy's architectural methodologies and the foundational Actor Model from the 1970s, we rethought PHP architecture from the ground up. The result is a framework that provides **microservice-level isolation without the network tax**. 
 
 It scales horizontally out of the box and enforces strict architectural principles proven to extend a system's lifespan far beyond the norm, specifically by isolating *volatility* rather than just functionality.
 
