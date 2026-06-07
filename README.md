@@ -9,7 +9,7 @@ For years, developers have faced an impossible choice when building complex, hig
 
 **Hird Engine** was born from a desire to reject this compromise. After studying Juval Löwy's architectural methodologies and the foundational Actor Model from the 1970s, we rethought PHP architecture from the ground up. The result is a framework that provides **microservice-level isolation without the network tax**, leveraging DI-container-based actors living directly in the PHP runtime. 
 
-It scales horizontally out of the box and enforces strict architectural principles proven to extend a system's lifespan far beyond the norm—specifically by isolating *volatility* rather than just functionality.
+It scales horizontally out of the box and enforces strict architectural principles proven to extend a system's lifespan far beyond the norm, specifically by isolating *volatility* rather than just functionality.
 
 ### Core Features
 * **Zero-Trust Security:** Built from the ground up with a strict, no-trust security model.
